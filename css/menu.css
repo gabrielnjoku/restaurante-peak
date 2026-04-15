@@ -80,3 +80,14 @@
     font-weight: 600;
 }
 
+.note{
+    text-align: center;
+    font-style: italic;
+    border: 1px dotted rgba(123, 28, 46, 0.9) ;
+    border-left: 2px solid  rgba(123, 28, 46, 0.9);
+    border-right: 2px solid  rgba(123, 28, 46, 0.9);
+    padding: 1rem 0;
+    margin: 1px;
+}
+
+
