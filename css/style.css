@@ -1,0 +1,204 @@
+/* ============================================================
+   style.css — Global Reset, CSS Variables & Base Typography
+   ============================================================ */
+
+/* ---------- Google Fonts Import ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&family=Open+Sans:wght@400;600&display=swap');
+
+/* ---------- CSS Custom Properties ---------- */
+:root {
+  /* Brand Colors */
+  --color-dark:   #1a0a0e;
+  --color-wine:   #7B1C2E;
+  --color-gold:   #C9A96E;
+  --color-cream:  #f5efe6;
+
+  /* Supporting Colors */
+  --color-dark-footer:  #0f0608;
+  --color-muted:        #888780;
+  --color-muted-text:   #5a4040;
+  --color-light-bg:     #f9f4f0;
+  --color-border:       #D3D1C7;
+
+  /* Typography */
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body:    'Lato', 'Open Sans', sans-serif;
+
+  /* Spacing Scale */
+  --space-xs:  0.25rem;
+  --space-sm:  0.5rem;
+  --space-md:  1rem;
+  --space-lg:  1.5rem;
+  --space-xl:  2rem;
+  --space-xxl: 4rem;
+
+  /* Layout */
+  --max-width:      1200px;
+  --section-pad:    2rem 1.5rem;
+  --border-radius:  6px;
+
+  /* Transitions */
+  --transition: 0.3s ease;
+}
+
+/* ---------- Box Sizing Reset ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- Base HTML & Body ---------- */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-cream);
+  color: var(--color-dark);
+  line-height: 1.7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- Typography ---------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--color-dark);
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2rem;  letter-spacing: 3px; }
+h3 { font-size: 1.4rem; }
+h4 { font-size: 1.1rem; }
+
+p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #3d3d3a;
+  margin-bottom: var(--space-md);
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+a {
+  color: var(--color-gold);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+a:hover {
+  color: var(--color-wine);
+}
+
+strong {
+  font-weight: 600;
+}
+
+em {
+  font-style: italic;
+}
+
+/* ---------- Images ---------- */
+img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* ---------- Lists (base reset) ---------- */
+ul, ol {
+  list-style: none;
+}
+
+/* ---------- Sections ---------- */
+section {
+  padding: var(--section-pad);
+}
+
+/* ---------- Page Title ---------- */
+.page-title {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  letter-spacing: 3px;
+  text-align: center;
+  color: var(--color-dark);
+  margin-bottom: var(--space-sm);
+}
+
+/* ---------- Section Subtitle (tagline under page titles) ---------- */
+.page-subtitle {
+  text-align: center;
+  font-size: 0.8rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: var(--space-xxl);
+}
+
+/* ---------- Content Wrapper ---------- */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+/* ---------- Gold Divider Accent ---------- */
+.gold-divider {
+  width: 60px;
+  height: 2px;
+  background-color: var(--color-gold);
+  margin: var(--space-md) auto;
+  border: none;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  padding: 0.85rem 2rem;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color var(--transition), color var(--transition), border-color var(--transition);
+  border: 1.5px solid transparent;
+}
+
+.btn-primary {
+  background-color: var(--color-gold);
+  color: var(--color-dark);
+  border-color: var(--color-gold);
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  color: var(--color-gold);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-gold);
+  border-color: var(--color-gold);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-gold);
+  color: var(--color-dark);
+}
+
+/* ---------- Main grows to push footer down ---------- */
+main {
+  flex: 1;
+}

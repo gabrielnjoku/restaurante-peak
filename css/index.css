@@ -1,0 +1,252 @@
+/* ============================================================
+   index.css — Home Page Styles
+   ============================================================ */
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+}
+
+.hero-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(26, 10, 14, 0.55) 0%,
+    rgba(26, 10, 14, 0.75) 100%
+  );
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  padding: 0 var(--space-lg);
+}
+
+.hero-tagline {
+  display: block;
+  font-size: 0.8rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: var(--space-md);
+}
+
+.hero-content h1 {
+  font-family: var(--font-heading);
+  font-size: 4rem;
+  color: var(--color-cream);
+  margin-bottom: var(--space-sm);
+  line-height: 1.15;
+}
+
+.hero-content .hero-sub {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 1.3rem;
+  color: rgba(245, 239, 230, 0.8);
+  margin-bottom: var(--space-xl);
+}
+
+/* ---------- Home Welcome Section ---------- */
+#home {
+  padding: var(--section-pad);
+  background-color: var(--color-cream);
+}
+
+.home-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.home-inner h2 {
+  font-size: 1.8rem;
+  letter-spacing: 3px;
+  margin-bottom: var(--space-md);
+}
+
+.home-inner p {
+  max-width: 680px;
+  margin: 0 auto var(--space-md);
+  font-size: 1.05rem;
+}
+
+/* ---------- Why Choose Us ---------- */
+.why-choose-us {
+  background-color: var(--color-dark);
+  padding: var(--space-xxl) var(--space-lg);
+  text-align: center;
+}
+
+.why-choose-us h2 {
+  color: var(--color-cream);
+  font-size: 1.8rem;
+  letter-spacing: 3px;
+  margin-bottom: var(--space-xl);
+}
+
+.why-choose-us ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-lg);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  text-align: left;
+}
+
+.why-choose-us ul li {
+  position: relative;
+  padding-left: 1.5rem;
+  color: var(--color-cream);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.why-choose-us ul li::before {
+  content: '•';
+  color: var(--color-gold);
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+/* ---------- Featured Dishes ---------- */
+.featured-dishes {
+  padding: var(--space-xxl) var(--space-lg);
+  background-color: var(--color-light-bg);
+  text-align: center;
+}
+
+.featured-dishes h2 {
+  font-size: 1.8rem;
+  letter-spacing: 3px;
+  margin-bottom: var(--space-sm);
+}
+
+.dishes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+  max-width: var(--max-width);
+  margin: var(--space-xl) auto 0;
+}
+
+.dish-card {
+  background-color: var(--color-cream);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(26, 10, 14, 0.08);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.dish-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(26, 10, 14, 0.15);
+}
+
+.dish-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.dish-card-body {
+  padding: var(--space-lg);
+}
+
+.dish-card-body h3 {
+  font-size: 1.1rem;
+  margin-bottom: var(--space-sm);
+  color: var(--color-dark);
+}
+
+.dish-price {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--color-wine);
+  font-weight: 700;
+}
+
+/* ---------- Info Strip ---------- */
+.info-strip {
+  background-color: var(--color-wine);
+  padding: var(--space-xl) var(--space-lg);
+  text-align: center;
+}
+
+.info-strip-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: var(--space-lg);
+  flex-wrap: wrap;
+}
+
+.info-strip-item {
+  color: var(--color-cream);
+}
+
+.info-strip-item span {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: var(--space-xs);
+}
+
+.info-strip-item p {
+  color: var(--color-cream);
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* ---------- Responsive — Tablet ---------- */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.8rem;
+  }
+
+  .dishes-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+  }
+}
+
+/* ---------- Responsive — Mobile ---------- */
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content .hero-sub {
+    font-size: 1rem;
+  }
+
+  .info-strip-inner {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+}
