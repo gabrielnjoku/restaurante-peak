@@ -66,8 +66,12 @@ nav[role="navigation"] ul li a:hover {
   border-bottom-color: var(--color-gold);
 }
 
-/* Active page link — apply class="active" to the current page's <a> */
-nav[role="navigation"] ul li a.active {
+/* Active page link — apply style to the current page's <a> */
+#page-home  nav a[href="index.html"],
+#page-menu  nav a[href="menu.html"],
+#page-about nav a[href="about.html"],
+#page-gallery  nav a[href="gallery.html"],
+#page-contact  nav a[href="contact.html"] {
   color: var(--color-gold);
   border-bottom: 1px solid var(--color-gold);
 }
@@ -139,6 +143,11 @@ footer {
 }
 
 /* ---------- Hamburger (Mobile Toggle) ---------- */
+
+.nav-checkbox {
+  display: none;
+}
+
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -161,6 +170,12 @@ footer {
 @media (max-width: 768px) {
   .nav-toggle {
     display: flex;
+    cursor: pointer;
+  }
+
+  /* Transition so the X animation is visible */
+  .nav-toggle span {
+    transition: transform 0.3s ease, opacity 0.3s ease;
   }
 
   nav[role="navigation"] {
@@ -173,10 +188,23 @@ footer {
     border-top: 1px solid rgba(201, 169, 110, 0.2);
     padding: var(--space-md) 0;
   }
-
-  nav[role="navigation"].open {
+ 
+  /* Checkbox checked shows nav */
+  .nav-checkbox:checked ~ nav[role="navigation"] {
     display: block;
   }
+
+  /* Checkbox checked animates label spans into X */
+  .nav-checkbox:checked ~ .nav-toggle span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .nav-checkbox:checked ~ .nav-toggle span:nth-child(2) {
+    opacity: 0;
+  }
+  .nav-checkbox:checked ~ .nav-toggle span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
 
   nav[role="navigation"] ul {
     flex-direction: column;

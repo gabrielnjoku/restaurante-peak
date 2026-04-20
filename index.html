@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Restaurante Peak — Authentic Northern Italian Cuisine in Enugu. Reserve your table today." />
   <title>Restaurante Peak — Home</title>
 
+  <!-- Google Fonts (also imported in style.css — kept here for faster paint) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
@@ -14,7 +16,189 @@
   <link rel="stylesheet" href="css/nav.css" />
   <link rel="stylesheet" href="css/index.css" />
 </head>
-<body>
+
+<body id="page-home">
+
+  <!-- =========================================================
+       HEADER & NAV
+       ========================================================= -->
+    <header role="banner">
+    <div class="nav-inner">
+
+        <a href="index.html" class="logo">Restaurante <span>Peak</span></a>
+
+        <!-- Checkbox holds the open/closed state — hidden visually -->
+        <input type="checkbox" id="nav-toggle" class="nav-checkbox" />
+
+        <!-- Label IS the hamburger — clicking it toggles the checkbox -->
+        <label for="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+        </label>
+
+        <nav role="navigation" aria-label="main">
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        </nav>
+
+    </div>
+    </header>
+  <!-- =========================================================
+       MAIN CONTENT
+       ========================================================= -->
+  <main>
+
+    <!-- -------------------------------------------------------
+         HERO
+         ------------------------------------------------------- -->
+    <section class="hero" aria-label="Hero banner">
+      <img
+        class="hero-image"
+        src="images/hero.jpg"
+        alt="Elegant restaurant interior with warm candlelight and white-clothed tables"
+      />
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-content">
+        <span class="hero-tagline">Authentic Italian Cuisine</span>
+        <h1>Restaurante Peak</h1>
+        <p class="hero-sub">Where tradition meets elevation</p>
+        <a href="contact.html" class="btn btn-primary">Reserve a Table &rarr;</a>
+      </div>
+    </section>
+
+    <!-- -------------------------------------------------------
+         HOME SECTION — Welcome + Why Choose Us
+         ------------------------------------------------------- -->
+    <section id="home">
+      <div class="home-inner">
+        <h2 class="page-title">Welcome</h2>
+        <hr class="gold-divider" />
+
+        <p>
+          Welcome to Restaurante Peak — a sanctuary of Northern Italian culinary tradition in the
+          heart of Enugu. Every dish is crafted from generations-old recipes, refined by
+          <strong>Chef Marco Deluca</strong> over two decades of training across Italy's finest kitchens.
+        </p>
+
+        <p>
+          We believe food is <em>memory</em>, <em>connection</em>, and <em>art</em>. Step inside,
+          and let us take you somewhere extraordinary.
+        </p>
+      </div>
+    </section>
+
+    <!-- -------------------------------------------------------
+         WHY CHOOSE US
+         ------------------------------------------------------- -->
+    <section class="why-choose-us" aria-label="Why choose us">
+      <h2 class="page-title" style="color: var(--color-cream);">Why Choose Us?</h2>
+      <hr class="gold-divider" />
+
+      <ul>
+        <li>Authentic hand-rolled pasta crafted <strong>fresh every morning</strong></li>
+        <li>Slow-cooked ragù simmered for <strong>8 hours</strong></li>
+        <li>Finest imported Italian and <em>local Nigerian ingredients</em></li>
+        <li>Intimate dining atmosphere — only <strong>40 covers</strong></li>
+        <li>Award-winning chef with <em>Michelin-starred pedigree</em></li>
+        <li>Zero-waste kitchen committed to <strong>seasonal sourcing</strong></li>
+      </ul>
+    </section>
+
+    <!-- -------------------------------------------------------
+         FEATURED DISHES — 3-column CSS Grid
+         ------------------------------------------------------- -->
+    <section class="featured-dishes" aria-label="Featured dishes">
+      <h2 class="page-title">Featured Dishes</h2>
+      <p class="page-subtitle">Crafted fresh · Traditional Italian recipes</p>
+
+      <div class="dishes-grid">
+
+        <article class="dish-card">
+          <img src="images/tagliatelle.jpg" alt="Tagliatelle al Ragù — hand-rolled pasta with slow-braised beef" />
+          <div class="dish-card-body">
+            <h3>Tagliatelle al Ragù</h3>
+            <p>Hand-rolled pasta with <strong>8-hour</strong> slow-braised beef and parmesan.</p>
+            <span class="dish-price">₦18,500</span>
+          </div>
+        </article>
+
+        <article class="dish-card">
+          <img src="images/osso-buco-milanese.jpg" alt="Osso Buco Milanese — braised veal shank with gremolata" />
+          <div class="dish-card-body">
+            <h3>Osso Buco Milanese</h3>
+            <p>Braised veal shank served with <em>gremolata</em> and saffron risotto.</p>
+            <span class="dish-price">₦22,000</span>
+          </div>
+        </article>
+
+        <article class="dish-card">
+          <img src="images/penne- all-arrabbiata.jpg" alt="Penne all'Arrabbiata — fiery tomato and garlic pasta" />
+          <div class="dish-card-body">
+            <h3>Penne all'Arrabbiata</h3>
+            <p>Fiery San Marzano tomato, <strong>fresh chilli</strong>, and roasted garlic.</p>
+            <span class="dish-price">₦16,500</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- -------------------------------------------------------
+         INFO STRIP
+         ------------------------------------------------------- -->
+    <section class="info-strip" aria-label="Quick information">
+      <div class="info-strip-inner">
+
+        <div class="info-strip-item">
+          <span>Location</span>
+          <p>121, Nza Street, Independence Layout, Enugu</p>
+        </div>
+
+        <div class="info-strip-item">
+          <span>Opening Hours</span>
+          <p>Mon – Thu: 12pm – 10pm &nbsp;|&nbsp; Fri – Sat: 12pm – 11pm</p>
+        </div>
+
+        <div class="info-strip-item">
+          <span>Reservations</span>
+          <p>+234 801 234 5678</p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-logo">Restaurante Peak</p>
+
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <ul class="footer-social">
+        <li><a href="#" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer">TripAdvisor</a></li>
+      </ul>
+
+      <p class="footer-copy">&copy; 2026 Restaurante Peak. All rights reserved.</p>
+    </div>
+  </footer>
 
 </body>
 </html>
