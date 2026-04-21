@@ -39,14 +39,31 @@
 
 /* ---------- Contact Section ---------- */
 
+.adress{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+
+}
+
 .container{
     display: grid;
     grid-template-columns:1fr;
     grid-template-rows:repeat(2, auto);
-    gap: 30px;
-    padding: 20px;
-    background-color: #C9A96e;
+    gap: 50px;
 }
+
+
+.days,
+.time{
+display: flex;
+flex-direction: column;
+gap: 2rem;
+justify-content: flex-start;
+align-items: flex-start;
+}
+
 
 .contact-form form{
     display: flex;
@@ -63,6 +80,8 @@
     grid-row: auto;
     gap: 1rem;
 }
+
+
 .contact-form label{
     font-size: 0.9rem;
     font-weight: 900;
