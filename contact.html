@@ -16,10 +16,42 @@
 
 </head>
 
-<body>
-    <!---Hero SECTION---->
+<body id="page-contact">
+    
+  <!-- =========================================================
+       HEADER & NAV
+       ========================================================= -->
+    <header role="banner">
+    <div class="nav-inner">
 
-    <section class="Hero">
+        <a href="index.html" class="logo">Restaurante <span>Peak</span></a>
+
+        <!-- Checkbox holds the open/closed state — hidden visually -->
+        <input type="checkbox" id="nav-toggle" class="nav-checkbox" />
+
+        <!-- Label IS the hamburger — clicking it toggles the checkbox -->
+        <label for="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+        </label>
+
+        <nav role="navigation" aria-label="main">
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        </nav>
+
+    </div>
+    </header>
+
+    <main>    
+    <!---Hero SECTION---->
+    <section class="hero">
         <H1>VISIT US</H1>
         <P>WE'D LOVE TO HEAR FROM YOU</P>
         <div class="overlay"></div>
@@ -30,7 +62,7 @@
     <section id="Contact">
         <div class="address">
             <p>
-                <strong>Address:</strong>12 Marina Street, GRA Phase 2 Port Harcourt, Rivers State
+                <strong>Address:</strong>121, Nza Street, Independence Layout, Enugu
             </p>
 
             <a href="tel:+234">call us :+234801234565</a>
@@ -132,5 +164,30 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d127227.00797634597!2d6.898855751757157!3d4.796818321768162!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sRestaurants!5e0!3m2!1sen!2sng!4v1776812527201!5m2!1sen!2sng" width="100%" height="100/100vh" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </section>
+
+    </main>
+
+
+    <footer>
+    <div class="footer-inner">
+      <p class="footer-logo">Restaurante Peak</p>
+
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <ul class="footer-social">
+        <li><a href="#" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer">TripAdvisor</a></li>
+      </ul>
+
+      <p class="footer-copy">&copy; 2026 Restaurante Peak. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>
