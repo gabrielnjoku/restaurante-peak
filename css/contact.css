@@ -38,15 +38,28 @@
 }
 
 /* ---------- Contact Section ---------- */
+.address{
+    display: flex;
+    flex-direction: column;
+}
+
 
 .container{
     display: grid;
     grid-template-columns:1fr;
     grid-template-rows:repeat(2, auto);
-    gap: 30px;
-    padding: 20px;
-    background-color: #C9A96e;
+    gap: 100px;
 }
+
+
+.hours{
+display: flex;
+flex-direction: row;
+gap: 2rem;
+justify-content: flex-start;
+align-content: center;
+}
+
 
 .contact-form form{
     display: flex;
@@ -63,6 +76,8 @@
     grid-row: auto;
     gap: 1rem;
 }
+
+
 .contact-form label{
     font-size: 0.9rem;
     font-weight: 900;
@@ -83,11 +98,6 @@
     border-radius: 5px;
 }
 
-.map-container {
-  height: 50px;
-  width: 100%;
-  filter: invert(90%) hue-rotate(180deg);
-}
 
 
 
@@ -101,5 +111,5 @@
     display: grid;
     grid-template-columns:repeat(2, 1fr);
     grid-template-rows:auto;
-    }    
+    }
 }
