@@ -12,9 +12,44 @@
     
 </head>
 
-<body>
-    <!-- HERO SECTION -->
-    <section class="hero">
+<body id="page-menu">
+
+    <!-- =========================================================
+       HEADER & NAV
+       ========================================================= -->
+       <header role="banner">
+        <div class="nav-inner">
+    
+            <a href="index.html" class="logo">Restaurante <span>Peak</span></a>
+    
+            <!-- Checkbox holds the open/closed state — hidden visually -->
+            <input type="checkbox" id="nav-toggle" class="nav-checkbox" />
+    
+            <!-- Label IS the hamburger — clicking it toggles the checkbox -->
+            <label for="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+            </label>
+    
+            <nav role="navigation" aria-label="main">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            </nav>
+    
+        </div>
+        </header>
+
+  <!-- MAIN SECTION  -->
+  <main>
+
+      <!-- HERO SECTION -->
+      <section class="hero">
         <h1>OUR MENU</h1>
         <p>CRAFTED FRESH DAILY. TRADITIONAL ITALIAN RECIPES</p>
         <div class="overlay"></div>
@@ -431,6 +466,32 @@
             requirements.</p>
     </div>
 
+
+  </main>
+
+
+<!-- FOOTER SECTION -->
+    <footer>
+    <div class="footer-inner">
+      <p class="footer-logo">Restaurante Peak</p>
+
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <ul class="footer-social">
+        <li><a href="#" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer">TripAdvisor</a></li>
+      </ul>
+
+      <p class="footer-copy">&copy; 2026 Restaurante Peak. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 
 
