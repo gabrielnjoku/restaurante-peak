@@ -4,9 +4,6 @@
     background-image: url(../images/hero2.jpg);
 }
 
-
-
-
 .menu-section:nth-child(even) {
     background: #f9f4f0;
 }
@@ -36,7 +33,7 @@
 .menu-item{
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px dotted rgba(255,255,255,0.2);
+    border-bottom: 1px dotted #888780;
     padding-bottom: 10px;
     transition: all 0.3s ease;
 
