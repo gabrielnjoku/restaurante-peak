@@ -15,9 +15,13 @@
 
 /* ---------- CONTACT SECTION ---------- */
 
+.contain{
+    display: flex;
+    flex-direction: row;
+}
 
-h4{
-    display: inline-block;
+h3{
+    margin-bottom: 3rem;
 }
 .container{
     display: grid;
