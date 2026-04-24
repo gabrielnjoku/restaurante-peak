@@ -13,13 +13,16 @@
 }
 
 
-/* ---------- Contact Section ---------- */
-.address{
-    display: flex;
-    flex-direction: column;
+/* ---------- CONTACT SECTION ---------- */
+
+.Contact-section{
+background-color:#30302E;
 }
 
 
+h4{
+    display: inline-block;
+}
 .container{
     display: grid;
     grid-template-columns:1fr;
@@ -28,22 +31,23 @@
 }
 
 
-.hours{
+.content{
 display: flex;
 flex-direction: row;
 gap: 2rem;
 justify-content: flex-start;
 align-content: center;
+color: aliceblue;
 }
-
 
 .contact-form form{
     display: flex;
     flex-direction: column;
     gap:1rem;
     width: 50%;
-    max-width: 45rem;
-    padding: 1rem 1rem;   
+    max-width: 80rem;
+    padding: 1rem 1rem;  
+    color: aliceblue; 
 }
 
 .contact-info{
@@ -82,7 +86,7 @@ align-content: center;
 /* Styles for screens 768px and wider (tablets and small desktops) */
 
  @media(min-width:768px)
-    {
+{
     .container{
     display: grid;
     grid-template-columns:repeat(2, 1fr);
