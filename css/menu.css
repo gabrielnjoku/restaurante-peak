@@ -37,11 +37,15 @@
     padding-bottom: 10px;
     transition: all 0.3s ease;
 
+
 }
 .menu-item:hover{
     transform: translateX(5px);
 }
 
+.menu-item div{
+width: 85%;
+}
 .menu-item h3{
     font-size: 1.2rem;
     
