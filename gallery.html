@@ -1,0 +1,196 @@
+<!-- 
+   gallery.html built by Gabriel Njoku
+-->
+   
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Restaurante Peak Gallery — Moments, flavours, and memories from our restaurant in Port Harcourt." />
+  <title>Restaurante Peak — Gallery</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/gallery.css" />
+</head>
+<body id="page-gallery">
+
+  <!-- =========================================================
+       HEADER & NAV
+       ========================================================= -->
+  <header role="banner">
+    <div class="nav-inner">
+
+      <a href="index.html" class="logo">Restaurante <span>Peak</span></a>
+
+        <!-- Checkbox holds the open/closed state — hidden visually -->
+        <input type="checkbox" id="nav-toggle" class="nav-checkbox" />
+
+        <!-- Label IS the hamburger container— clicking it toggles the checkbox -->
+        <label for="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+        </label>
+
+      <nav role="navigation" aria-label="main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="gallery.html" class="active">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- =========================================================
+       MAIN CONTENT
+       ========================================================= -->
+  <main>
+
+    <section id="gallery">
+      <div class="gallery-inner">
+
+        <!-- Page Header -->
+        <div class="gallery-header">
+          <h2 class="page-title">Our Space</h2>
+          <p class="page-subtitle">Moments &middot; Flavours &middot; Memories</p>
+        </div>
+
+        <!-- -------------------------------------------------------
+             GALLERY GRID — 4 columns desktop, 2 tablet, 1 mobile
+             Each item: <figure class="gallery-item"> wrapping
+             <img> + <div class="caption"><figcaption>
+             ------------------------------------------------------- -->
+        <div class="gallery-grid">
+
+          <!-- Row 1 — Interior -->
+          <figure class="gallery-item" data-category="interior">
+            <img src="images/gallery/gallery-1.jpg" alt="Warm-lit dining room with candles and linen-covered tables" />
+            <div class="caption">
+              <figcaption>Dining Room</figcaption>
+            </div>
+          </figure>
+
+          <figure class="gallery-item" data-category="food">
+            <img src="images/gallery/gallery-2.jpg" alt="Tagliatelle al Ragù plated with parmesan shavings and fresh herbs" />
+            <div class="caption">
+              <figcaption>Tagliatelle al Ragù</figcaption>
+            </div>
+          </figure>
+
+          <figure class="gallery-item" data-category="atmosphere">
+            <img src="images/gallery/gallery-3.jpg" alt="Guests dining by candlelight in the main dining room" />
+            <div class="caption">
+              <figcaption>Evening Atmosphere</figcaption>
+            </div>
+          </figure>
+
+          <figure class="gallery-item" data-category="kitchen">
+            <img src="images/gallery/gallery-4.jpg" alt="Chef Marco preparing pasta dough on a marble countertop" />
+            <div class="caption">
+              <figcaption>Kitchen Prep</figcaption>
+            </div>
+          </figure>
+
+          <!-- Row 2 — Chef at work + Food -->
+          <figure class="gallery-item" data-category="kitchen">
+            <img src="images/gallery/gallery-5.jpg" alt="Chef Marco plating Osso Buco at the pass" />
+            <div class="caption">
+              <figcaption>Chef at Work</figcaption>
+            </div>
+          </figure>
+
+          <figure class="gallery-item" data-category="interior">
+            <img src="images/gallery/gallery-6.jpg" alt="Exterior of Restaurante Peak at night with warm lighting" />
+            <div class="caption">
+              <figcaption>Restaurant Exterior</figcaption>
+            </div>
+          </figure>
+
+          <figure class="gallery-item" data-category="food">
+            <img src="images/gallery/gallery-7.jpg" alt="Close-up of Burrata e Prosciutto antipasto plating" />
+            <div class="caption">
+              <figcaption>Burrata e Prosciutto</figcaption>
+            </div>
+          </figure>
+
+          <figure class="gallery-item" data-category="atmosphere">
+            <img src="images/gallery/gallery-8.jpg" alt="Wine glasses and a bottle of Barolo on a candlelit table" />
+            <div class="caption">
+              <figcaption>Wine Pairing</figcaption>
+            </div>
+          </figure>
+
+          <!-- Row 3 — Details + Desserts -->
+          <figure class="gallery-item" data-category="atmosphere">
+            <img src="images/gallery/gallery-9.jpg" alt="Elegantly laid table with fresh flowers and gold cutlery" />
+            <div class="caption">
+              <figcaption>Table Setting</figcaption>
+            </div>
+          </figure>
+
+          <figure class="gallery-item" data-category="food">
+            <img src="images/gallery/gallery-10.jpg" alt="Tiramisù della Casa dusted with cocoa and served in a glass" />
+            <div class="caption">
+              <figcaption>Tiramisù della Casa</figcaption>
+            </div>
+          </figure>
+
+          <figure class="gallery-item" data-category="interior">
+            <img src="images/gallery/gallery-11.jpg" alt="Bar area with dark wood shelving and a backlit spirits display" />
+            <div class="caption">
+              <figcaption>The Bar</figcaption>
+            </div>
+          </figure>
+
+          <figure class="gallery-item" data-category="atmosphere">
+            <img src="images/gallery/gallery-12.jpg" alt="Restaurante Peak dining room at night with full tables and guests" />
+            <div class="caption">
+              <figcaption>A Full House</figcaption>
+            </div>
+          </figure>
+
+        </div><!-- /.gallery-grid -->
+
+      </div><!-- /.gallery-inner -->
+    </section><!-- /#gallery -->
+
+  </main>
+
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-logo">Restaurante Peak</p>
+
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <ul class="footer-social">
+        <li><a href="#" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer">TripAdvisor</a></li>
+      </ul>
+
+      <p class="footer-copy">&copy; 2026 Restaurante Peak. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

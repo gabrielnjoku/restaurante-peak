@@ -1,113 +1,217 @@
+<!-- 
+   about.html redesignned by Gabriel Njoku
+-->
+   
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Restaurante Peak</title>
-    <link rel="stylesheet" href="css/about.css">
-    <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Our story — Restaurante Peak was born from a dream to bring Northern Italian cuisine to Port Harcourt. Meet Chef Marco Deluca." />
+  <title>Restaurante Peak — About Us</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/about.css" />
 </head>
-<body>
+<body id="page-about">
 
-    <!-- Hero -->
-    <header class="hero">
-        <div class="hero-overlay">
-            <h1>About Restaurante Peak</h1>
-            <p>Authentic Italian Taste, Elevated Dining Experience</p>
-        </div>
-    </header>
+  <!-- =========================================================
+       HEADER & NAV
+       ========================================================= -->
+  <header role="banner">
+    <div class="nav-inner">
 
-    <!-- Our Story and Mission -->
-    <section class="story">
-        <article>
-            <h2>Our Story</h2>
+      <a href="index.html" class="logo">Restaurante <span>Peak</span></a>
+
+        <!-- Checkbox holds the open/closed state — hidden visually -->
+        <input type="checkbox" id="nav-toggle" class="nav-checkbox" />
+
+        <!-- Label IS the hamburger container— clicking it toggles the checkbox -->
+        <label for="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+        </label>
+
+      <nav role="navigation" aria-label="main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html" class="active">About Us</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- =========================================================
+       MAIN CONTENT
+       ========================================================= -->
+  <main>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <h1>OUR STORY</h1>
+        <p>PASSION &middot; TRADITION &middot; EXCELLENCE</p>
+        <div class="overlay"></div>
+    </section>
+
+    <section id="about">
+      <div class="about-inner">
+
+        <!-- -------------------------------------------------------
+             STORY GRID: text left | 2x2 photos right
+             ------------------------------------------------------- -->
+        <div class="story-grid">
+
+          <!-- Left: Story Text -->
+          <div class="story-text">
+            <h3>Born from a dream</h3>
+
             <p>
-                Restaurante Peak was born from a passion for authentic Italian cuisine 
-                and a desire to create unforgettable dining experiences. Inspired by 
-                traditional recipes passed down through generations, we blend heritage 
-                with modern culinary excellence.
+              Restaurante Peak was born in <strong>2019</strong> from a dream to bring the warmth
+              and precision of Northern Italian cuisine to the Coal City. What began as a single
+              table shared between friends has grown into one of the most celebrated dining
+              experiences in Enugu State.
             </p>
-        </article>
 
-        <article>
-            <h2>Our Mission</h2>
             <p>
-                To serve high-quality Italian meals made with fresh ingredients while 
-                delivering exceptional service in a warm and welcoming environment.
+              Chef Marco Deluca trained at the prestigious <em>Alma Culinary School in Parma</em>
+              and spent a decade honing his craft in Michelin-starred restaurants across Bologna,
+              Milan, and London. Every recipe tells a story — our ragù simmers for
+              <strong>eight hours</strong>; pasta is hand-rolled each morning before service.
             </p>
-        </article>
-    </section>
 
-    <!-- photogrid (unique section) -->
-    <section class="unique">
-        <h2>What Makes Us Unique</h2>
-        <div class="unique-grid">
-            <article><img src="images/pasta.jpg" alt="Pasta"></article>
-            <article><img src="images/pizza.jpg" alt="Pizza"></article>
-            <article><img src="images/head chef.jpg" alt="Head Chef"></article>
-            <article><img src="images/soup.jpg" alt="Soup"></article>
+            <p>
+              We believe in <em>slow food</em> — dishes worth the wait, made with respect for the
+              ingredient and reverence for tradition. We source the finest imported Italian
+              produce alongside the best local Nigerian ingredients, celebrating both worlds on
+              every plate.
+            </p>
+
+            <p>
+              Our kitchen operates a <strong>zero-waste policy</strong>. Vegetable off-cuts become
+              stocks; bread crusts become breadcrumbs; seasonal produce shapes the daily specials.
+              It is our quiet commitment to the planet, and to our guests.
+            </p>
+          </div>
+
+          <!-- Right: 2×2 Photo Grid -->
+          <div class="photo-grid">
+            <img src="images/dining.jpg" alt="Warm-lit dining room with timber tables and soft candlelight" />
+            <img src="images/open-kitchen.jpg" alt="Open kitchen with chef plating a dish at the pass" />
+            <img src="images/gallery/gallery-3.jpg" alt="Guests enjoying an intimate dinner at Restaurante Peak" />
+            <img src="images/gallery/gallery-6.jpg" alt="Exterior entrance of Restaurante Peak at night" />
+          </div>
+
+        </div><!-- /.story-grid -->
+
+        <!-- -------------------------------------------------------
+             PHILOSOPHY SECTION
+             ------------------------------------------------------- -->
+        <div class="philosophy">
+          <h3>Our Philosophy</h3>
+          <p>
+            We respect the ingredient. We follow the season. We cook with love and serve with pride.
+            Food is not merely sustenance — it is <em>memory</em>, it is <em>connection</em>,
+            it is the thread that runs through every culture.
+          </p>
+          <p>
+            At Restaurante Peak, every guest is family. Every meal is an occasion.
+            We are honoured to share our table with you.
+          </p>
         </div>
-    </section>
 
-    <!-- Our Values section -->
-    <section class="values">
-        <h2>Our Values</h2>
-        <div class="values-grid">
-            <article>
-                <h3>Quality</h3>
-                <p>We use only fresh, premium ingredients.</p>
-            </article>
+        <!-- -------------------------------------------------------
+             CHEF SECTION
+             ------------------------------------------------------- -->
+        <section class="chef-section" aria-label="Meet the chef">
+          <h2 class="page-title">Meet the Chef</h2>
+          <hr class="gold-divider" />
 
-            <article>
-                <h3>Authenticity</h3>
-                <p>True Italian recipes and cooking techniques.</p>
-            </article>
+          <div class="chef-card">
 
-            <article>
-                <h3>Customer First</h3>
-                <p>Your satisfaction is our priority.</p>
-            </article>
+            <!-- Chef Portrait -->
+            <div class="chef-img-wrap">
+              <img
+                class="chef-img"
+                src="images/chef-maco.jpg"
+                alt="Chef Marco Deluca, Executive Chef and Founder of Restaurante Peak"
+              />
+            </div>
 
-            <article>
-                <h3>Consistency</h3>
-                <p>Every visit delivers the same great experience.</p>
-            </article>
-        </div>
-    </section>
+            <!-- Chef Bio -->
+            <div class="chef-bio">
+              <h3>Chef Marco Deluca</h3>
+              <p class="chef-role">Executive Chef &amp; Founder</p>
 
-    <!-- Meet Team -->
-    <section class="team">
-        <h2>Meet the Team</h2>
-        <div class="team-grid">
-            <article>
-                <img src="images/head chef.jpg" alt="Head Chef">
-                <h3>Chef Marco</h3>
-                <p>Head Chef</p>
-            </article>
+              <p>
+                Marco Deluca is a graduate of <strong>Alma Culinary School, Parma</strong> — widely
+                regarded as Italy's finest culinary institution. After earning his diploma with
+                distinction, he trained under two Michelin-starred chefs in Bologna and later
+                served as Sous Chef at a celebrated restaurant in London's Mayfair.
+              </p>
 
-            <article>
-                <img src="images/Chef Lucia.jpg" alt="Pastry Specialist">
-                <h3>Chef Lucia</h3>
-                <p>Pastry Specialist</p>
-            </article>
+              <p>
+                His philosophy is simple: source the finest ingredients, follow traditional
+                technique, and let the flavour speak. He returned to Nigeria in 2019 to open
+                Restaurante Peak — bringing two decades of European culinary mastery home.
+              </p>
 
-            <article>
-                <img src="images/Rossi.jpg" alt="Restaurant Manager">
-                <h3>Giovanni Rossi</h3>
-                <p>Restaurant Manager</p>
-            </article>
-        </div>
-    </section>
+              <p>
+                <em>"The best dishes are the ones your grandmother made — but made perfectly."</em>
+              </p>
 
-    <!-- Quality guaranty Info -->
-    <section class="quality">
-        <h2>Quality Guarantee</h2>
-        <p>
-            At Restaurante Peak, we guarantee freshness, hygiene, and excellence in 
-            every meal. If you're not satisfied, we are committed to making it right.
-        </p>
-    </section>
+              <!-- Awards -->
+              <div class="awards-list" aria-label="Awards and recognition">
+                <div class="award">Best Italian Restaurant — Enugu Food Awards 2023</div>
+                <div class="award">Top 10 Restaurants, Enugu State — Dining Guide 2024</div>
+                <div class="award">Chef of the Year Nominee — Nigeria Hospitality Awards 2024</div>
+              </div>
+
+            </div><!-- /.chef-bio -->
+
+          </div><!-- /.chef-card -->
+
+        </section><!-- /.chef-section -->
+
+      </div><!-- /.about-inner -->
+    </section><!-- /#about -->
+
+  </main>
+
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-logo">Restaurante Peak</p>
+
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <ul class="footer-social">
+        <li><a href="#" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer">TripAdvisor</a></li>
+      </ul>
+
+      <p class="footer-copy">&copy; 2026 Restaurante Peak. All rights reserved.</p>
+    </div>
+  </footer>
 
 </body>
 </html>

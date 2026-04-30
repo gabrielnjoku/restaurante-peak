@@ -1,155 +1,208 @@
 
-
-/* hero */
-.hero {
-    height: 60vh;
-    background: url('images/hero.jpg') center/cover no-repeat;
-    position: relative;
+/*
+about.css redesignned by Gabriel Njoku
+ */
+  
+/* HERO */ 
+.hero{
+    background-image: url(../images/hero-about.jpg);
 }
 
-.hero-overlay {
-    background: none;
-    color: white;
-    height: 100%;
-    display: grid;
-    place-content: center;
+/* ---------- About Section Wrapper ---------- */
+
+#about {
+  padding: var(--space-xxl) var(--space-lg);
+  background-color: var(--color-cream);
+}
+
+.about-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* ---------- About Page Header ---------- */
+.about-header {
+  text-align: center;
+  margin-bottom: var(--space-xxl);
+}
+
+/* ---------- Story Grid: text left | 2x2 photos right ---------- */
+.story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  align-items: start;
+  margin-bottom: var(--space-xxl);
+}
+
+.story-text h3 {
+  font-size: 1.3rem;
+  color: var(--color-wine);
+  margin-bottom: var(--space-lg);
+}
+
+.story-text p {
+  margin-bottom: var(--space-md);
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #3d3d3a;
+}
+
+/* ---------- 2×2 Photo Grid (inside story right column) ---------- */
+.photo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-sm);
+}
+
+.photo-grid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+}
+
+/* ---------- Philosophy Section ---------- */
+.philosophy {
+  background-color: var(--color-light-bg);
+  padding: var(--space-xl) var(--space-xl);
+  border-radius: var(--border-radius);
+  margin-bottom: var(--space-xxl);
+  text-align: center;
+  border-top: 2px solid var(--color-gold);
+}
+
+.philosophy h3 {
+  font-size: 1.2rem;
+  color: var(--color-wine);
+  margin-bottom: var(--space-md);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.philosophy p {
+  max-width: 640px;
+  margin: 0 auto var(--space-md);
+  font-style: italic;
+}
+
+/* ---------- Chef Section: photo left | bio right ---------- */
+.chef-section {
+  margin-bottom: var(--space-xxl);
+}
+
+.chef-section h2 {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.chef-card {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-xxl);
+  background-color: var(--color-dark);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  padding: var(--space-xl);
+}
+
+.chef-img-wrap {
+  flex: 0 0 280px;
+}
+
+.chef-img {
+  width: 100%;
+  border-radius: var(--border-radius);
+  object-fit: cover;
+  aspect-ratio: 3 / 4;
+}
+
+.chef-bio {
+  flex: 1;
+  color: var(--color-cream);
+}
+
+.chef-card h3 {
+  font-size: 1.8rem;
+  color: var(--color-cream);
+  margin-bottom: var(--space-xs);
+}
+
+.chef-role {
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: var(--space-lg);
+}
+
+.chef-bio p {
+  color: rgba(245, 239, 230, 0.8);
+  margin-bottom: var(--space-md);
+}
+
+/* ---------- Awards ---------- */
+.awards-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-top: var(--space-lg);
+}
+
+.award {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  border: 0.5px solid var(--color-gold);
+  border-radius: var(--border-radius);
+  padding: var(--space-sm) var(--space-md);
+  font-size: 0.85rem;
+  color: var(--color-gold);
+  width: fit-content;
+}
+
+.award::before {
+  content: '★';
+  color: var(--color-gold);
+  font-size: 0.75rem;
+}
+
+/* ---------- Responsive — Tablet ---------- */
+@media (max-width: 768px) {
+  /* Story grid collapses to 1 column */
+  .story-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Photo grid stays 2 columns */
+  .photo-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Chef card stacks image above bio */
+  .chef-card {
+    flex-direction: column;
+    align-items: center;
     text-align: center;
+  }
+
+  .chef-img-wrap {
+    flex: 0 0 auto;
+    width: 220px;
+  }
+
+  .award {
+    margin: 0 auto;
+  }
 }
 
-.hero h1 {
-    font-size: 2.5rem;
-}
+/* ---------- Responsive — Mobile ---------- */
+@media (max-width: 480px) {
+  #about {
+    padding: var(--space-xl) var(--space-md);
+  }
 
-/* the general body */
-section {
-    padding: 40px 20px;
-}
-
-h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-/* story */
-.story {
-    display: grid;
-    gap: 20px;
-}
-
-/* unique grids */
-.unique-grid {
-    display: grid;
-    gap: 15px;
-}
-
-.unique-grid img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-/* values */
-.values-grid {
-    display: grid;
-    gap: 20px;
-}
-
-.values article {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    text-align: center;
-}
-
-/* team */
-.team-grid {
-    display: grid;
-    gap: 20px;
-}
-
-.team img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.team article {
-    text-align: center;
-    background: white;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-/* quality* */
-.quality {
-    text-align: center;
-    background: none;
-    color: white !important;
-}
-
-/* responsive design section*/
-
-/* mobile: 320px - 767px */
-@media (max-width: 767px) {
-
-    .hero h1 {
-        font-size: 1.8rem;
-    }
-
-    .unique-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .values-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .team-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* tablets: 768px - 1023px */
-@media (min-width: 768px) and (max-width: 1023px) {
-
-    .story {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .unique-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .values-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .team-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* big screen: 1024px+ */
-@media (min-width: 1024px) {
-
-    .story {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .unique-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    .values-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    .team-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
+  .photo-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
