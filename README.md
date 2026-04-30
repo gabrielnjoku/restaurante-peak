@@ -45,7 +45,7 @@ css/
 Clone the repo, drop your images into the `images/` folder, and open `index.html` in a browser. No build step required.
 
 ```bash
-git clone https://github.com/your-username/restaurante-peak.git
+git clone https://github.com/gabrielnjoku/restaurante-peak.git
 cd restaurante-peak
 ```
 
